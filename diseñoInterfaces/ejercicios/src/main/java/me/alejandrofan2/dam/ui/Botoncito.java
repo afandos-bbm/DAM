@@ -8,11 +8,11 @@ import javax.swing.JPanel;
  * Hello world!
  *
  */
-public class App extends JFrame {
+public class Botoncito extends JFrame {
     JPanel panel;
     JButton botoncitoOk;
 
-    public App() {
+    public Botoncito() {
         setTitle("Botoncito");
         setLayout(null);
         setBounds(200, 300, 200, 300);
@@ -28,6 +28,6 @@ public class App extends JFrame {
     }
 
     public static void main(String[] args) {
-        new App();
+        new Botoncito();
     }
 }
