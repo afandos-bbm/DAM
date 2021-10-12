@@ -3,36 +3,41 @@ package me.alejandrofan2.dam.ui.util;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
+import java.io.Serializable;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
+import me.alejandrofan2.dam.ui.TimerPanel;
+
+import java.awt.Transparency;
+
 public class CustomTimer extends JPanel {
 
+    private TimerPanel parent;
     private Timer timerCron = new Timer();
     private boolean init = false;
     private boolean pause = false;
+    private boolean finished = false;
     private JLabel tiempoLbl;
     private Integer minutos = 0;
     private Integer segundos = 0;
     private Integer milesimas = 0;
 
-    private boolean finished = false;
-
-    public CustomTimer() {
+    public CustomTimer(JPanel parent) {
         setSize(300, 200);
         setLayout(new BorderLayout());
+
+        this.parent = (TimerPanel) parent;
 
         tiempoLbl = new JLabel("00:00:000");
         tiempoLbl.setFont(new Font(Font.SERIF, Font.BOLD, 50));
         tiempoLbl.setHorizontalAlignment(SwingConstants.CENTER);
         tiempoLbl.setForeground(Color.BLUE);
-        tiempoLbl.setBackground(Color.WHITE);
+        tiempoLbl.setBackground(new Color(255, 255, 255, 0));
         tiempoLbl.setOpaque(true);
 
         add(tiempoLbl, BorderLayout.CENTER);
@@ -44,6 +49,10 @@ public class CustomTimer extends JPanel {
 
             @Override
             public void run() {
+                if (pause || !init) {
+                    cancel();
+                }
+
                 // TODO Auto-generated method stub
                 if (segundos == 0 && minutos > 0) {
                     minutos--;
@@ -63,6 +72,7 @@ public class CustomTimer extends JPanel {
                 milesimas -= 4;
 
                 tiempoLbl.setText(format(minutos, segundos, milesimas));
+                parent.repaint();
             }
         }, 0, 4);
     }
@@ -84,10 +94,10 @@ public class CustomTimer extends JPanel {
         else
             seg = segundos.toString();
 
-        if (milesimas <= 99)
+        if (milesimas <= 9)
+            mil = "00" + milesimas;
+        else if (milesimas <= 99)
             mil = "0" + milesimas;
-        else if (milesimas <= 999)
-            mil = milesimas.toString();
         else
             mil = milesimas.toString();
         return min + ":" + seg + ":" + mil;

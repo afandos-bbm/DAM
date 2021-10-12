@@ -25,7 +25,7 @@ public class TimerPanel extends JPanel {
 
         setLayout(new BoxLayout(this, 1));
 
-        crono = new CustomTimer();
+        crono = new CustomTimer(this);
         add(crono);
 
         JPanel buttonPanel = new JPanel();

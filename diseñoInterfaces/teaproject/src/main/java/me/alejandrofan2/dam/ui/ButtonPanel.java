@@ -23,8 +23,6 @@ public class ButtonPanel extends JPanel {
         add(rojo);
         list.add(negro);
         add(negro);
-
-
     }
 
     public String getSelected() {

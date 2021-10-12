@@ -59,6 +59,7 @@ public class App implements CommandLineRunner, ActionListener {
                 JToggleButton btnStartStop = ((TimerPanel) timerPanel).getStartStopButton();
                 btnStartStop.setSelected(false);
                 btnStartStop.setText("Start");
+                timerPanel.repaint();
             }
         } else if (o instanceof JToggleButton) {
             JToggleButton btn = (JToggleButton) o;
