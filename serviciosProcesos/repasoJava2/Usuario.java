@@ -46,7 +46,15 @@ public class Usuario {
     public String toString() {
         String toString = "Nombre: " + nombre + " Edad: " + edad;
         for (int i = 0; i < materiales.size(); i++) {
-            toString += "\n" + materiales.get(i).toString();
+            if (materiales.get(i) instanceof Libro) {
+                Libro libro = (Libro) materiales.get(i);
+                if (libro.getNumPage() >= 500) {
+                    toString += "\n Libro:" + materiales.get(i).toString();
+                } else {
+                    toString += "\n" + materiales.get(i).toString();
+                }
+            }
+            
         }
         return toString;
 
