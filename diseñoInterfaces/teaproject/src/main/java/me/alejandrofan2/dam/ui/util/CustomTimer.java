@@ -3,19 +3,30 @@ package me.alejandrofan2.dam.ui.util;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
-import java.io.Serializable;
+import java.awt.FontFormatException;
+import java.awt.Rectangle;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
+
+import java.io.FileNotFoundException;
+
+import org.apache.tomcat.util.net.URL;
 
 import me.alejandrofan2.dam.ui.TimerPanel;
 
-import java.awt.Transparency;
-
 public class CustomTimer extends JPanel {
+
+    private Font timerFont;
 
     private TimerPanel parent;
     private Timer timerCron = new Timer();
@@ -36,12 +47,14 @@ public class CustomTimer extends JPanel {
         tiempoLbl = new JLabel("00:00:000");
         tiempoLbl.setFont(new Font(Font.SERIF, Font.BOLD, 50));
         tiempoLbl.setHorizontalAlignment(SwingConstants.CENTER);
-        tiempoLbl.setForeground(Color.BLUE);
+        tiempoLbl.setForeground(Color.RED);
         tiempoLbl.setBackground(new Color(255, 255, 255, 0));
         tiempoLbl.setOpaque(true);
+        tiempoLbl.setBorder(new CompoundBorder(new LineBorder(Color.RED, 4, true), new EmptyBorder(-10, 30, -10, 30)));
 
         add(tiempoLbl, BorderLayout.CENTER);
         setVisible(true);
+
     }
 
     public void run() {
@@ -49,14 +62,13 @@ public class CustomTimer extends JPanel {
 
             @Override
             public void run() {
-                if (pause || !init) {
+                if (pause || !init || finished) {
                     cancel();
                 }
 
-                // TODO Auto-generated method stub
                 if (segundos == 0 && minutos > 0) {
                     minutos--;
-                    segundos = 60;
+                    segundos = 59;
                 }
                 if (milesimas <= 0 && segundos > 0) {
                     segundos--;
@@ -66,7 +78,7 @@ public class CustomTimer extends JPanel {
                 if (minutos == 0 && segundos == 0 && milesimas == 0) {
                     finished = true;
                     tiempoLbl.setText(format(minutos, segundos, milesimas));
-                    return;
+                    cancel();
                 }
 
                 milesimas -= 4;

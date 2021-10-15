@@ -4,17 +4,23 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JToggleButton;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.GraphicsEnvironment;
+import java.awt.Font;
+import java.awt.FontFormatException;
+import java.io.File;
+import java.io.IOException;
 
-import org.springframework.boot.SpringApplication;
-import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import javax.swing.JToggleButton;
+import org.springframework.boot.SpringApplication;
 
 import me.alejandrofan2.dam.ui.util.CustomTimer;
 
@@ -23,28 +29,36 @@ public class App implements CommandLineRunner, ActionListener {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    JFrame appFrame = new MainFrame(new Dimension(600, 300), new BorderLayout());
-    JPanel timerPanel = new TimerPanel(this);
+    JPanel mainPanel = new JPanel();
     JPanel buttonPanel = new ButtonPanel();
+    JPanel timerPanel = new TimerPanel(this);
+    JFrame appFrame = new MainFrame(new Dimension(600, 300), new BorderLayout(), mainPanel);
 
     public static void main(String[] args) {
         System.setProperty("java.awt.headless", "false"); // Disables headless
         SpringApplication.run(App.class, args);
-
     }
 
     @Override
-    public void run(String... args) throws Exception {
-        // TODO Auto-generated method stub
+    public void run(String... args) {
+        init();
 
-        appFrame.add(buttonPanel, BorderLayout.CENTER);
-        appFrame.add(timerPanel, BorderLayout.EAST);
+        while (true) {
+            // TODO: Win code.
+            if (((CustomTimer) (((TimerPanel) timerPanel).getCrono())).isFinished()) {
+                System.out.println("test");
+                mainPanel.removeAll();
+                mainPanel.repaint();
+            }
+        }
+    }
 
+    public void init() {
+        mainPanel.setVisible(true);
         appFrame.setVisible(true);
 
-        if (((CustomTimer) (((TimerPanel) timerPanel).getCrono())).isFinished()) {
-            // TODO: Win code.
-        }
+        mainPanel.add(buttonPanel, BorderLayout.CENTER);
+        mainPanel.add(timerPanel, BorderLayout.EAST);
     }
 
     @Override

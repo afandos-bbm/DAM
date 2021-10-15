@@ -6,6 +6,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JToggleButton;
+import javax.swing.border.EmptyBorder;
 
 import java.awt.FlowLayout;
 import javax.swing.BoxLayout;
@@ -29,6 +30,7 @@ public class TimerPanel extends JPanel {
         add(crono);
 
         JPanel buttonPanel = new JPanel();
+        buttonPanel.setBorder(new EmptyBorder(15, 0, 0, 0));
         buttonPanel.setLayout(new FlowLayout());
 
         startStopButton.addActionListener(listener);
@@ -81,7 +83,7 @@ public class TimerPanel extends JPanel {
     public void setCrono(JPanel crono) {
         this.crono = crono;
     }
-    
+
     /**
      * @return JToggleButton return the startStopButton
      */

@@ -1,9 +1,14 @@
 package me.alejandrofan2.dam.ui;
 
+import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
+import javax.swing.border.EmptyBorder;
+
+import java.awt.Color;
+import java.awt.Font;
 
 public class ButtonPanel extends JPanel {
 
@@ -17,6 +22,13 @@ public class ButtonPanel extends JPanel {
 
         setLayout(new BoxLayout(this, 1));
 
+        verde.setFont(new Font("Arial", Font.BOLD, 25));
+        rojo.setFont(new Font("Arial", Font.BOLD, 25));
+        negro.setFont(new Font("Arial", Font.BOLD, 25));
+
+        verde.setBorder(BorderFactory.createEmptyBorder(20,20,10,5));
+        rojo.setBorder(BorderFactory.createEmptyBorder(20,20,10,5));
+        negro.setBorder(BorderFactory.createEmptyBorder(20,20,10,5));
         list.add(verde);
         add(verde);
         list.add(rojo);
