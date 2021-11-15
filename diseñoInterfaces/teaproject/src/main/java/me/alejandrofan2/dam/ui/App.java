@@ -1,26 +1,21 @@
 package me.alejandrofan2.dam.ui;
 
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JToggleButton;
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.GraphicsEnvironment;
-import java.awt.Font;
-import java.awt.FontFormatException;
-import java.io.File;
-import java.io.IOException;
 
-import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
-
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import me.alejandrofan2.dam.ui.util.CustomTimer;
 
@@ -32,7 +27,7 @@ public class App implements CommandLineRunner, ActionListener {
     JPanel mainPanel = new JPanel();
     JPanel buttonPanel = new ButtonPanel();
     JPanel timerPanel = new TimerPanel(this);
-    JFrame appFrame = new MainFrame(new Dimension(600, 300), new BorderLayout(), mainPanel);
+    JFrame appFrame = new MainFrame(new Dimension(600, 320), new BorderLayout(), mainPanel);
 
     public static void main(String[] args) {
         System.setProperty("java.awt.headless", "false"); // Disables headless
@@ -41,9 +36,7 @@ public class App implements CommandLineRunner, ActionListener {
 
     @Override
     public void run(String... args) {
-        init();
-
-        while (true) {
+        while (init()){
             // TODO: Win code.
             if (((CustomTimer) (((TimerPanel) timerPanel).getCrono())).isFinished()) {
                 System.out.println("test");
@@ -53,12 +46,13 @@ public class App implements CommandLineRunner, ActionListener {
         }
     }
 
-    public void init() {
+    public boolean init() {
         mainPanel.setVisible(true);
         appFrame.setVisible(true);
 
         mainPanel.add(buttonPanel, BorderLayout.CENTER);
         mainPanel.add(timerPanel, BorderLayout.EAST);
+        return true;
     }
 
     @Override

@@ -3,9 +3,8 @@ package me.alejandrofan2.dam.ui;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.LayoutManager2;
-import javax.swing.BoxLayout;
 
-import javax.swing.ImageIcon;
+import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;

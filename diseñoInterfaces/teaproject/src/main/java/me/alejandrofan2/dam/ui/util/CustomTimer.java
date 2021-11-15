@@ -3,14 +3,9 @@ package me.alejandrofan2.dam.ui.util;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.FontFormatException;
-import java.awt.Rectangle;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
@@ -18,15 +13,9 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 
-import java.io.FileNotFoundException;
-
-import org.apache.tomcat.util.net.URL;
-
 import me.alejandrofan2.dam.ui.TimerPanel;
 
 public class CustomTimer extends JPanel {
-
-    private Font timerFont;
 
     private TimerPanel parent;
     private Timer timerCron = new Timer();
@@ -50,7 +39,8 @@ public class CustomTimer extends JPanel {
         tiempoLbl.setForeground(Color.RED);
         tiempoLbl.setBackground(new Color(255, 255, 255, 0));
         tiempoLbl.setOpaque(true);
-        tiempoLbl.setBorder(new CompoundBorder(new LineBorder(Color.RED, 4, true), new EmptyBorder(-10, 30, -10, 30)));
+        tiempoLbl
+                .setBorder(new CompoundBorder(new LineBorder(Color.RED, 4, true), new EmptyBorder(-100, 30, -100, 30)));
 
         add(tiempoLbl, BorderLayout.CENTER);
         setVisible(true);
@@ -75,15 +65,15 @@ public class CustomTimer extends JPanel {
                     milesimas = 999;
                 }
 
-                if (minutos == 0 && segundos == 0 && milesimas == 0) {
+                if (minutos == 0 && segundos == 0 && milesimas <= 0) {
                     finished = true;
-                    tiempoLbl.setText(format(minutos, segundos, milesimas));
+                    tiempoLbl.setText(format(minutos, segundos, 0));
                     cancel();
+                    System.out.println("test crono");
+                } else {
+                    milesimas -= 4;
+                    tiempoLbl.setText(format(minutos, segundos, milesimas));
                 }
-
-                milesimas -= 4;
-
-                tiempoLbl.setText(format(minutos, segundos, milesimas));
                 parent.repaint();
             }
         }, 0, 4);

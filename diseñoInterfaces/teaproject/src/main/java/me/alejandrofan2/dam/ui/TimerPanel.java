@@ -30,7 +30,7 @@ public class TimerPanel extends JPanel {
         add(crono);
 
         JPanel buttonPanel = new JPanel();
-        buttonPanel.setBorder(new EmptyBorder(15, 0, 0, 0));
+        buttonPanel.setBorder(new EmptyBorder(15, 0, 15, 0));
         buttonPanel.setLayout(new FlowLayout());
 
         startStopButton.addActionListener(listener);
