@@ -2,12 +2,8 @@ package me.alejandrofan2.dam.serviciosprocesos.ejercicio4;
 
 import java.util.Scanner;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 public class FCFS {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(FCFS.class);
     private final Scanner in = new Scanner(System.in);
 
     int pid[];// id proceso
@@ -26,7 +22,7 @@ public class FCFS {
     }
 
     private void init() {
-        LOGGER.info("enter no of process: ");
+        System.out.print("enter nº of process: ");
         int n = in.nextInt();
         pid = new int[n];
         arrivalTime = new int[n];
@@ -37,9 +33,9 @@ public class FCFS {
         int temp;
 
         for (int i = 0; i < n; i++) {
-            LOGGER.info("enter process " + (i + 1) + " arrival time: ");
+            System.out.print("enter process " + (i + 1) + " arrival time: ");
             arrivalTime[i] = in.nextInt();
-            LOGGER.info("enter process " + (i + 1) + " brust time: ");
+            System.out.print("enter process " + (i + 1) + " brust time: ");
             burstTime[i] = in.nextInt();
             pid[i] = i + 1;
         }
@@ -79,14 +75,14 @@ public class FCFS {
             avgWaitingTime += waitingTime[i]; // total waiting time
             avgTimeArround += turnArround[i]; // total turnaround time
         }
-        LOGGER.info("\npid  arrival  brust  complete turn waiting");
+        System.out.print("\npid  arrival  brust  complete turn waiting");
         for (int i = 0; i < nProcess; i++) {
-            LOGGER.info(pid[i] + "  \t " + arrivalTime[i] + "\t" + burstTime[i] + "\t" + completionTime[i] + "\t"
-                    + turnArround[i] + "\t" + waitingTime[i]);
+            System.out.print("\n" + pid[i] + "  \t " + arrivalTime[i] + "\t" + burstTime[i] + "\t" + completionTime[i]
+                    + "\t" + turnArround[i] + "\t" + waitingTime[i]);
         }
         in.close();
-        LOGGER.info("\naverage waiting time: " + (avgWaitingTime / nProcess));
-        LOGGER.info("average turnaround time:" + (avgTimeArround / nProcess));
+        System.out.print("\nAverage waiting time: " + (avgWaitingTime / nProcess));
+        System.out.print("\nAverage turnaround time:" + (avgTimeArround / nProcess));
     }
 
     @Override
