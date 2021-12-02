@@ -2,8 +2,6 @@ package me.alejandrofan2.dam.serviciosprocesos.ejercicio8;
 
 import static java.lang.String.format;
 
-import java.util.Random;
-
 public class RetiradasT extends Thread {
 
     private String title;
@@ -20,8 +18,8 @@ public class RetiradasT extends Thread {
             try {
                 manager.retirar(super.getName());
             } catch (InterruptedException e) {
-                manager.log.error(format("%s Error en el proceso de retirada%nOmitiendo... %n%s", title,
-                        e.getStackTrace().toString()));
+                manager.log.error(format("%s Error en el proceso de retirada%nOmitiendo... %n", title));
+                Thread.currentThread().interrupt();
             }
         }
     }

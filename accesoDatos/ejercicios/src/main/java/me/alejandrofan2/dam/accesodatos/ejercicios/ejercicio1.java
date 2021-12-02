@@ -4,30 +4,34 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class ejercicio1 {
 
     static File folder;
     static File file;
     static Scanner in = new Scanner(System.in);
+    private static final Logger log = LoggerFactory.getLogger("Ejercicio 1");
 
     public static void main(String[] args) {
-        System.out.println("Set the workpace folder(Path): ");
+        System.out.print("Set the workpace folder(Path): ");
         folder = new File(in.nextLine());
         if (!folder.exists()) {
             System.exit(1);
         }
 
-        System.out.println("Name of the file: ");
+        System.out.print("Name of the file: ");
         file = new File(folder + in.nextLine());
         if (file.exists()) {
-            System.out.println("El tamaño del archivo es de: " + file.length() + " B");
+            log.info("El tamaño del archivo es de: " + file.length() + " B");
         } else {
             try {
                 file.createNewFile();
-                System.out.println("Se ha creado el fichero con nombre: " + file.getName() + " en el directorio "
+                log.info("Se ha creado el fichero con nombre: " + file.getName() + " en el directorio "
                         + folder.getAbsolutePath());
             } catch (IOException e) {
-                System.err.println("[!] Error durante la creación del archivo");
+                log.error("[!] Error durante la creación del archivo");
             }
         }
     }
