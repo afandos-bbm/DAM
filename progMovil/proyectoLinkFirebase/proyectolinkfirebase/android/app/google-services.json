@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1067749653541",
+    "project_id": "test-1f09d",
+    "storage_bucket": "test-1f09d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067749653541:android:bdb464cf7ab0a40ed153cc",
+        "android_client_info": {
+          "package_name": "me.alejandrofan2.dam.progmovil.linkfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1067749653541-emieponka46mnh4om5nv005d76cciko6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi7N6FC-SyM4AleflYGcbRjlJh7sJ7sNo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1067749653541-emieponka46mnh4om5nv005d76cciko6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
