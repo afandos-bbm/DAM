@@ -8,8 +8,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomeTempState extends State<HomePage> {
-  final opciones = ["Primero", "Segundo", "Tercero"];
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;

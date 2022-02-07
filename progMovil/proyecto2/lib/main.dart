@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:proyecto2/src/pages/alert_page.dart';
 import 'package:proyecto2/src/pages/card_page.dart';
+import 'package:proyecto2/src/pages/codeorder_main_page.dart';
 import 'package:proyecto2/src/pages/home_page.dart';
+import 'package:proyecto2/src/pages/home_page_json.dart';
 import 'package:proyecto2/src/pages/input_page.dart';
 import 'package:proyecto2/src/pages/slider_page.dart';
 
@@ -43,6 +45,8 @@ class _MyHomePageState extends State<MyHomePage> {
       initialRoute: '/',
       routes: {
         '/': (context) => HomePage(),
+        '/json': (context) => HomePageJson(),
+        '/code': (context) => HomePageCode(),
         '/card': (context) => CardPage(),
         '/alert': (context) => const AlertPage(),
         '/slider': (context) => const SlidePage(),
