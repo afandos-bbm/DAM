@@ -1,4 +1,4 @@
-# componentes
+# teashop
 
 A new Flutter project.
 
