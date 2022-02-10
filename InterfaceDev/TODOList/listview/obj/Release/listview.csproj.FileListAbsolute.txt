@@ -1,0 +1,10 @@
+C:\Users\Aleja\Desktop\listview\listview\bin\Release\listview.exe.config
+C:\Users\Aleja\Desktop\listview\listview\bin\Release\listview.exe
+C:\Users\Aleja\Desktop\listview\listview\bin\Release\listview.pdb
+C:\Users\Aleja\Desktop\listview\listview\obj\Release\listview.csproj.SuggestedBindingRedirects.cache
+C:\Users\Aleja\Desktop\listview\listview\obj\Release\listview.Form1.resources
+C:\Users\Aleja\Desktop\listview\listview\obj\Release\listview.Properties.Resources.resources
+C:\Users\Aleja\Desktop\listview\listview\obj\Release\listview.csproj.GenerateResource.cache
+C:\Users\Aleja\Desktop\listview\listview\obj\Release\listview.csproj.CoreCompileInputs.cache
+C:\Users\Aleja\Desktop\listview\listview\obj\Release\listview.exe
+C:\Users\Aleja\Desktop\listview\listview\obj\Release\listview.pdb

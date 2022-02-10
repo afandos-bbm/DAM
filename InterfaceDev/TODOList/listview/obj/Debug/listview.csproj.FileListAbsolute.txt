@@ -1,0 +1,20 @@
+c:\users\montoya\documents\visual studio 2012\Projects\listview\listview\bin\Debug\listview.exe.config
+c:\users\montoya\documents\visual studio 2012\Projects\listview\listview\bin\Debug\listview.exe
+c:\users\montoya\documents\visual studio 2012\Projects\listview\listview\bin\Debug\listview.pdb
+c:\users\montoya\documents\visual studio 2012\Projects\listview\listview\obj\Debug\listview.csprojResolveAssemblyReference.cache
+c:\users\montoya\documents\visual studio 2012\Projects\listview\listview\obj\Debug\listview.Form1.resources
+c:\users\montoya\documents\visual studio 2012\Projects\listview\listview\obj\Debug\listview.Properties.Resources.resources
+c:\users\montoya\documents\visual studio 2012\Projects\listview\listview\obj\Debug\listview.csproj.GenerateResource.Cache
+c:\users\montoya\documents\visual studio 2012\Projects\listview\listview\obj\Debug\listview.exe
+c:\users\montoya\documents\visual studio 2012\Projects\listview\listview\obj\Debug\listview.pdb
+C:\Users\Aleja\Desktop\listview\listview\obj\Debug\listview.csproj.AssemblyReference.cache
+C:\Users\Aleja\Desktop\listview\listview\obj\Debug\listview.csproj.SuggestedBindingRedirects.cache
+C:\Users\Aleja\Desktop\listview\listview\obj\Debug\listview.Form1.resources
+C:\Users\Aleja\Desktop\listview\listview\obj\Debug\listview.Properties.Resources.resources
+C:\Users\Aleja\Desktop\listview\listview\obj\Debug\listview.csproj.GenerateResource.cache
+C:\Users\Aleja\Desktop\listview\listview\obj\Debug\listview.csproj.CoreCompileInputs.cache
+C:\Users\Aleja\Desktop\listview\listview\obj\Debug\listview.exe
+C:\Users\Aleja\Desktop\listview\listview\obj\Debug\listview.pdb
+C:\Users\Aleja\Desktop\listview\listview\bin\Debug\listview.exe.config
+C:\Users\Aleja\Desktop\listview\listview\bin\Debug\listview.exe
+C:\Users\Aleja\Desktop\listview\listview\bin\Debug\listview.pdb
