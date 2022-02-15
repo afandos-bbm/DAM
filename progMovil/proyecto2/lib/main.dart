@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
       routes: {
         '/': (context) => HomePage(),
         '/json': (context) => HomePageJson(),
-        '/code': (context) => HomePageCode(),
+        '/code': (context) => const HomePageCode(),
         '/card': (context) => CardPage(),
         '/alert': (context) => const AlertPage(),
         '/slider': (context) => const SlidePage(),

@@ -9,7 +9,7 @@ class InputPage extends StatefulWidget {
 
 class _InputPageState extends State<InputPage> {
   String _name = '', _email = '';
-  final items = ['Volar', 'Rayos X', 'Super aliento', 'Super Fuerza'];
+  List<String> items = ['Volar', 'Rayos X', 'Super aliento', 'Super Fuerza'];
   String selectedValue = 'Volar';
 
   @override
@@ -28,7 +28,6 @@ class _InputPageState extends State<InputPage> {
             height: 70,
             child: TextField(
               decoration: InputDecoration(
-                isDense: true,
                 suffixIcon: const Icon(Icons.accessibility),
                 icon: const Icon(Icons.account_circle),
                 enabledBorder: const OutlineInputBorder(
@@ -36,7 +35,7 @@ class _InputPageState extends State<InputPage> {
                     Radius.circular(20.0),
                   ),
                 ),
-                hintText: 'Nombre',
+                label: Text("Nombre"),
                 helperText: 'Sólo es el nombre',
                 counterText: 'Letras: ${_name.length.toString()}',
                 counterStyle: const TextStyle(
@@ -61,9 +60,9 @@ class _InputPageState extends State<InputPage> {
                 icon: Icon(Icons.email),
                 suffixIcon: Icon(Icons.alternate_email_outlined),
                 enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                  borderRadius: BorderRadius.all(Radius.circular(15.0)),
                 ),
-                hintText: 'Email',
+                label: Text("Email"),
               ),
               onChanged: (value) {
                 setState(
@@ -86,9 +85,9 @@ class _InputPageState extends State<InputPage> {
                 icon: Icon(Icons.lock),
                 suffixIcon: Icon(Icons.lock_open_outlined),
                 enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                  borderRadius: BorderRadius.all(Radius.circular(15.0)),
                 ),
-                hintText: 'Password',
+                label: Text("Password"),
               ),
             ),
           ),
@@ -102,10 +101,10 @@ class _InputPageState extends State<InputPage> {
                 isDense: true,
                 icon: Icon(Icons.calendar_today),
                 suffixIcon: Icon(Icons.perm_contact_cal),
+                label: Text("Fecha nacimiento"),
                 enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                  borderRadius: BorderRadius.all(Radius.circular(15.0)),
                 ),
-                hintText: 'Fecha de nacimiento',
               ),
             ),
           ),

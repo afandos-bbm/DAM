@@ -1,4 +1,4 @@
-# teashop
+# shopfy
 
 A new Flutter project.
 

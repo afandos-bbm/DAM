@@ -27,13 +27,15 @@ class _SlidePageState extends State<SlidePage> {
             min: 0,
             max: 100,
             label: _value.round().toString(),
-            onChanged: (double value) {
-              setState(
-                () {
-                  _value = value;
-                },
-              );
-            },
+            onChanged: checkBoxValue
+                ? null
+                : (double value) {
+                    setState(
+                      () {
+                        _value = value;
+                      },
+                    );
+                  },
           ),
           CheckboxListTile(
             title: const Text('Bloquear Slider'),
@@ -60,8 +62,7 @@ class _SlidePageState extends State<SlidePage> {
           Image(
             width: _value,
             height: _value,
-            image: NetworkImage(
-                "http://pngimg.com/uploads/batman/batman_PNG52.png"),
+            image: AssetImage("data/bat.png"),
           ),
         ],
       ),
