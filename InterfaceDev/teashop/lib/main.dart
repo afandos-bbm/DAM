@@ -1,7 +1,8 @@
+import 'package:TeaShop/pages/tabs.page.dart';
+import 'package:TeaShop/themes/dark_theme.dart';
+import 'package:TeaShop/themes/light_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:shopfy/pages/tabs.page.dart';
-import 'package:shopfy/themes/dark_theme.dart';
-import 'package:shopfy/themes/light_theme.dart';
+
 
 void main() => runApp(MyApp());
 

@@ -1,10 +1,11 @@
+import 'package:TeaShop/pages/signup.page.dart';
+import 'package:TeaShop/widgets/social_button.dart';
 import 'package:flutter/material.dart';
-import 'package:shopfy/main.dart';
-import 'package:shopfy/pages/home.page.dart';
-import 'package:shopfy/pages/signup.page.dart';
-import 'package:shopfy/themes/dark_theme.dart';
-import 'package:shopfy/themes/light_theme.dart';
-import 'package:shopfy/widgets/social_button.dart';
+import 'package:TeaShop/main.dart';
+import 'package:TeaShop/themes/dark_theme.dart';
+import 'package:TeaShop/themes/light_theme.dart';
+
+import 'home.page.dart';
 
 class LoginPage extends StatelessWidget {
   @override

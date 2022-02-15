@@ -1,5 +1,5 @@
+import 'package:TeaShop/widgets/category/category_item.dart';
 import 'package:flutter/material.dart';
-import 'package:shopfy/widgets/category/category_item.dart';
 
 class CategoryList extends StatelessWidget {
   @override

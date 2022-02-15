@@ -1,7 +1,7 @@
+import 'package:TeaShop/main.dart';
+import 'package:TeaShop/themes/dark_theme.dart';
+import 'package:TeaShop/themes/light_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:shopfy/main.dart';
-import 'package:shopfy/themes/dark_theme.dart';
-import 'package:shopfy/themes/light_theme.dart';
 
 class SearchBox extends StatelessWidget {
   @override

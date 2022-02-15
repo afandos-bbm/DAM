@@ -1,5 +1,5 @@
+import 'package:TeaShop/widgets/product/product_card.dart';
 import 'package:flutter/material.dart';
-import 'package:shopfy/widgets/product/product_card.dart';
 
 class ProductList extends StatelessWidget {
   @override
