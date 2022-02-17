@@ -8,3 +8,14 @@ C:\Users\Aleja\Desktop\listview\listview\obj\Release\listview.csproj.GenerateRes
 C:\Users\Aleja\Desktop\listview\listview\obj\Release\listview.csproj.CoreCompileInputs.cache
 C:\Users\Aleja\Desktop\listview\listview\obj\Release\listview.exe
 C:\Users\Aleja\Desktop\listview\listview\obj\Release\listview.pdb
+C:\Users\Aleja\Documents\workspace\DAM\InterfaceDev\TODOList\listview\bin\Release\TODOList.exe.config
+C:\Users\Aleja\Documents\workspace\DAM\InterfaceDev\TODOList\listview\bin\Release\TODOList.exe
+C:\Users\Aleja\Documents\workspace\DAM\InterfaceDev\TODOList\listview\bin\Release\TODOList.pdb
+C:\Users\Aleja\Documents\workspace\DAM\InterfaceDev\TODOList\listview\obj\Release\listview.csproj.AssemblyReference.cache
+C:\Users\Aleja\Documents\workspace\DAM\InterfaceDev\TODOList\listview\obj\Release\listview.csproj.SuggestedBindingRedirects.cache
+C:\Users\Aleja\Documents\workspace\DAM\InterfaceDev\TODOList\listview\obj\Release\listview.Form1.resources
+C:\Users\Aleja\Documents\workspace\DAM\InterfaceDev\TODOList\listview\obj\Release\TODOList.Properties.Resources.resources
+C:\Users\Aleja\Documents\workspace\DAM\InterfaceDev\TODOList\listview\obj\Release\listview.csproj.GenerateResource.cache
+C:\Users\Aleja\Documents\workspace\DAM\InterfaceDev\TODOList\listview\obj\Release\listview.csproj.CoreCompileInputs.cache
+C:\Users\Aleja\Documents\workspace\DAM\InterfaceDev\TODOList\listview\obj\Release\TODOList.exe
+C:\Users\Aleja\Documents\workspace\DAM\InterfaceDev\TODOList\listview\obj\Release\TODOList.pdb

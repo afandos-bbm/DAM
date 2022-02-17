@@ -1,4 +1,4 @@
-import 'package:TeaShop/widgets/product/product_card.dart';
+import 'package:tea_shop/widgets/product/product_card.dart';
 import 'package:flutter/material.dart';
 
 class ProductList extends StatelessWidget {

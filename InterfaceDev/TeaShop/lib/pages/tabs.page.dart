@@ -1,10 +1,10 @@
-import 'package:TeaShop/pages/cart.page.dart';
-import 'package:TeaShop/pages/home.page.dart';
-import 'package:TeaShop/pages/login.page.dart';
+import 'package:tea_shop/pages/cart.page.dart';
+import 'package:tea_shop/pages/home.page.dart';
+import 'package:tea_shop/pages/login.page.dart';
 import 'package:flutter/material.dart';
-import 'package:TeaShop/main.dart';
-import 'package:TeaShop/themes/dark_theme.dart';
-import 'package:TeaShop/themes/light_theme.dart';
+import 'package:tea_shop/main.dart';
+import 'package:tea_shop/themes/dark_theme.dart';
+import 'package:tea_shop/themes/light_theme.dart';
 
 class TabsPage extends StatelessWidget {
   @override

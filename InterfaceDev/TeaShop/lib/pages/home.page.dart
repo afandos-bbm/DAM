@@ -1,10 +1,10 @@
-import 'package:TeaShop/widgets/category/category_list.dart';
-import 'package:TeaShop/widgets/product/product_list.dart';
-import 'package:TeaShop/widgets/search_box.dart';
+import 'package:tea_shop/widgets/category/category_list.dart';
+import 'package:tea_shop/widgets/product/product_list.dart';
+import 'package:tea_shop/widgets/search_box.dart';
 import 'package:flutter/material.dart';
-import 'package:TeaShop/main.dart';
-import 'package:TeaShop/themes/dark_theme.dart';
-import 'package:TeaShop/themes/light_theme.dart';
+import 'package:tea_shop/main.dart';
+import 'package:tea_shop/themes/dark_theme.dart';
+import 'package:tea_shop/themes/light_theme.dart';
 
 class HomePage extends StatelessWidget {
   @override

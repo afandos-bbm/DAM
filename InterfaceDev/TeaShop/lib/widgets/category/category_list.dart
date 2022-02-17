@@ -1,4 +1,4 @@
-import 'package:TeaShop/widgets/category/category_item.dart';
+import 'package:tea_shop/widgets/category/category_item.dart';
 import 'package:flutter/material.dart';
 
 class CategoryList extends StatelessWidget {
