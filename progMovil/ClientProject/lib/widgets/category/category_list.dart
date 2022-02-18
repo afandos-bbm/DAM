@@ -5,7 +5,6 @@ import 'package:client_project/objetos/marca.dart';
 import 'package:client_project/widgets/category/category_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:flutter/widgets.dart' show WidgetsFlutterBinding;
 
 class CategoryList extends StatefulWidget {
   @override

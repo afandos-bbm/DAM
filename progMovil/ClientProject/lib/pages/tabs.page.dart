@@ -1,6 +1,5 @@
 import 'package:client_project/pages/cart.page.dart';
 import 'package:client_project/pages/home.page.dart';
-import 'package:client_project/pages/login.page.dart';
 import 'package:client_project/pages/user_page.dart';
 import 'package:flutter/material.dart';
 import 'package:client_project/main.dart';
@@ -21,6 +20,7 @@ class _TabsPageState extends State<TabsPage>
     tabController = TabController(length: 3, vsync: this);
   }
 
+  // ! Finish app.
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(

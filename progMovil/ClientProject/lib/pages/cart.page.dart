@@ -5,8 +5,14 @@ import 'package:client_project/themes/dark_theme.dart';
 import 'package:client_project/themes/light_theme.dart';
 import 'package:provider/provider.dart';
 
-class CartPage extends StatelessWidget {
+class CartPage extends StatefulWidget {
+  @override
+  State<CartPage> createState() => _CartPageState();
+}
+
+class _CartPageState extends State<CartPage> {
   CartProvider cartProvider;
+
   @override
   Widget build(BuildContext context) {
     cartProvider = Provider.of<CartProvider>(context);
@@ -99,7 +105,7 @@ class CartPage extends StatelessWidget {
               children: <Widget>[
                 Text(title),
                 Text(
-                  "\$ ${price}",
+                  "\$ $price",
                   style: TextStyle(
                       color: MyApp.darkMode
                           ? DarkTheme.primaryColor

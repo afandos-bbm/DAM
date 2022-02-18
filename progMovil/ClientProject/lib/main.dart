@@ -18,7 +18,7 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  User _user = FirebaseAuth.instance.currentUser;
+  final User _user = FirebaseAuth.instance.currentUser;
   static String marcasJson;
 
   static get darkMode => _darkMode;

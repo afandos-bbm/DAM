@@ -1,17 +1,19 @@
 import 'package:client_project/pages/signup.page.dart';
-import 'package:client_project/pages/tabs.page.dart';
 import 'package:client_project/widgets/auth_service.dart';
 import 'package:client_project/widgets/social_button.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:client_project/main.dart';
 import 'package:client_project/themes/dark_theme.dart';
 import 'package:client_project/themes/light_theme.dart';
 
-import 'home.page.dart';
+class LoginPage extends StatefulWidget {
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
 
-class LoginPage extends StatelessWidget {
+class _LoginPageState extends State<LoginPage> {
   TextEditingController _emailController = TextEditingController();
+
   TextEditingController _passwordController = TextEditingController();
 
   @override

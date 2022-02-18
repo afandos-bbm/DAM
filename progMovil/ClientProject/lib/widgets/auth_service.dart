@@ -37,11 +37,3 @@ Future<bool> register(
     return false;
   }
 }
-
-class AuthService {
-  User user;
-
-  AuthService({this.user});
-
-  Future getUserData() {}
-}
