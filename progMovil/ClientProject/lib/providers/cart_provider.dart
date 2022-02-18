@@ -7,6 +7,8 @@ class CartProvider with ChangeNotifier {
   double totalPrice = 0;
 
   List<List<dynamic>> get cart => _cart;
+
+  
   set cart(List<List<dynamic>> cart) {
     cart.forEach((element) {
       totalPrice += element[4];
