@@ -25,20 +25,19 @@ public class DBService {
         this.password = password;
     }
 
-    
     public Connection getConnection() throws SQLException {
         if (connection == null || connection.isClosed()) {
             connection = DriverManager.getConnection(url, user, password);
         }
         return connection;
     }
-    
+
     public void closeConnection() throws SQLException {
         if (connection != null && !connection.isClosed()) {
             connection.close();
         }
     }
-    
+
     public String getUrl() {
         return url;
     }

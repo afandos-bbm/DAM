@@ -159,21 +159,98 @@ public enum SQLQueries {
             INSERT INTO Paradas_Linea (ID_parada, id_linea) VALUES(666, 51);
             INSERT INTO Paradas_Linea (ID_parada, id_linea) VALUES(777, 51); """),
     // * MODIFICACIÓN DE LA BASE DE DATOS
-    QUERY1(""),
+    QUERY1("""
+            CREATE DOMAIN Dom_DNI AS VARCHAR(9) CHECK (VALUE ~ '^[0-9]{8}[A-Z]$');
+
+            CREATE TABLE Bonos(
+            ID_bono Dom_ID,
+                    Tipo
+            varchar(20),
+            Duracion smallint);
+
+            CREATE TABLE
+
+            Usuarios (
+            ID_DNI Dom_DNI,
+
+            Nombre varchar(20),
+            F_nacimiento Date,
+
+            Ciudad varchar(15)
+            );
+
+            CREATE TABLE
+
+            Bonos_Activos (
+            ID_bono Dom_ID,
+            DNI_usuario Dom_DNI,
+            ID_linea Dom_ID,
+            Caducidad Date
+            );
+            """),
+
     // * INSERCIÓN DE NUEVOS DATOS
-    QUERY2(""),
+    QUERY2("""
+            INSERT INTO Bonos VALUES(1, 'todo incluido', 1);
+            INSERT INTO Bonos VALUES(2, 'todo incluido', 7);
+            INSERT INTO Bonos VALUES(3, 'todo incluido', 30);
+            INSERT INTO Bonos VALUES(4, '50%', 1);
+            INSERT INTO Bonos VALUES(5, '50%', 7);
+            INSERT INTO Bonos VALUES(6, '50%', 30);
+
+            INSERT INTO Usuarios VALUES('11222333A', 'Patricia P''erez', '10/12/1990', 'Burriana');
+            INSERT INTO Usuarios VALUES('22333444B', 'Lia Lorca', '31/01/2002', 'Castell''on');
+            INSERT INTO Usuarios VALUES('33444555C', 'Nela N''u~nez', '28/03/2008', 'Almazora');
+            INSERT INTO Usuarios VALUES('44555666D', 'Jose Jim''enez', '15/12/2001', 'Nules');
+            INSERT INTO Usuarios VALUES('55666777E', 'Antonio Aranda', '09/09/1989', 'Mascarell');
+
+            INSERT INTO Bonos_Activos VALUES(2, '11222333A', 11, '22/02/22');
+            INSERT INTO Bonos_Activos VALUES(5, '11222333A', 31, '17/02/22');
+            INSERT INTO Bonos_Activos VALUES(1, '22333444B', 41, '16/02/22');
+            INSERT INTO Bonos_Activos VALUES(4, '33444555C', 21, '16/02/22');
+            INSERT INTO Bonos_Activos VALUES(6, '44555666D', 51, '15/03/22');
+            INSERT INTO Bonos_Activos VALUES(3, '44555666D', 21, '01/03/22');
+                """),
     // * CONSULTA DE DATOS
     // * * CONSULTA1
-    QUERY3(""),
+    QUERY3_1("""
+            SELECT Nombre FROM Conductores
+            JOIN lineas ON Conductores.id_conductor = lineas.id_conductor
+            JOIN Bonos_Activos ON lineas.id_linea = Bonos_Activos.id_linea
+            WHERE Bonos_Activos.Caducidad > CURRENT_DATE;
+            """),
     // * * CONSULTA2
-    QUERY4(""),
+    QUERY3_2("""
+            SELECT Nombre, F_nacimiento FROM Usuarios
+            JOIN Bonos_Activos ON Usuarios.ID_DNI = Bonos_Activos.DNI_usuario
+            WHERE Bonos_Activos.Caducidad > CURRENT_DATE
+            AND Bonos_Activos.Duracion = 1;
+            """),
     // * * CONSULTA3
-    QUERY5(""),
+    QUERY3_3("""
+            SELECT Tipo, COUNT(*) FROM Bonos_Activos
+            WHERE Caducidad > CURRENT_DATE
+            GROUP BY Tipo
+            HAVING COUNT(*) > 1;
+            """),
     // * ACTUALIZACIÓN DE DATOS
     // * * CONSULTA1
-    QUERY6(""),
+    QUERY4_1("""
+            DELETE FROM Bonos_Activos
+            WHERE DNI_usuario IN (SELECT ID_DNI FROM Usuarios WHERE F_nacimiento < CURRENT_DATE);
+            DELETE FROM Usuarios WHERE F_nacimiento < CURRENT_DATE;
+            """),
     // * * CONSULTA2
-    QUERY7("");
+    QUERY4_2("""
+            DELETE FROM Bonos_Activos
+            WHERE DNI_usuario IN (SELECT ID_DNI FROM Usuarios WHERE F_nacimiento < CURRENT_DATE)
+            AND Duracion = 30
+            AND Tipo = '50%';
+
+            DELETE FROM Bonos
+            WHERE Tipo = '50%'
+            AND Duracion = 30;
+            """);
 
     private String sql;
 
