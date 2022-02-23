@@ -5,7 +5,12 @@
       "ProjectGuid": "d3257f70-4bba-4819-b95b-61a82a33eb77",
       "DisplayName": "listview",
       "ColorIndex": 0
+    },
+    "911ee08e-8f2a-4a08-beee-b9b84035a2d4": {
+      "ProjectGuid": "911ee08e-8f2a-4a08-beee-b9b84035a2d4",
+      "DisplayName": "wizard_advinst",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

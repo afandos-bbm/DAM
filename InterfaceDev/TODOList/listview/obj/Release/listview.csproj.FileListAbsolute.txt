@@ -19,3 +19,7 @@ C:\Users\Aleja\Documents\workspace\DAM\InterfaceDev\TODOList\listview\obj\Releas
 C:\Users\Aleja\Documents\workspace\DAM\InterfaceDev\TODOList\listview\obj\Release\listview.csproj.CoreCompileInputs.cache
 C:\Users\Aleja\Documents\workspace\DAM\InterfaceDev\TODOList\listview\obj\Release\TODOList.exe
 C:\Users\Aleja\Documents\workspace\DAM\InterfaceDev\TODOList\listview\obj\Release\TODOList.pdb
+C:\Users\Aleja\Documents\workspace\DAM\InterfaceDev\TODOList\listview\bin\Release\TODOList.exe.manifest
+C:\Users\Aleja\Documents\workspace\DAM\InterfaceDev\TODOList\listview\bin\Release\TODOList.application
+C:\Users\Aleja\Documents\workspace\DAM\InterfaceDev\TODOList\listview\obj\Release\TODOList.exe.manifest
+C:\Users\Aleja\Documents\workspace\DAM\InterfaceDev\TODOList\listview\obj\Release\TODOList.application

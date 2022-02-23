@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <connectionStrings>
+    <add name="connection" connectionString="Data Source=MONTOYA-PC\SQLEXPRESS;Initial Catalog=EjemplosUsuarios;Integrated Security=True" providerName="System.Data.SqlClient"/>
+  </connectionStrings>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.8"/>
+  </startup>
+</configuration>

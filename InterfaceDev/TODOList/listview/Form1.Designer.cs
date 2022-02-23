@@ -20,6 +20,8 @@
             base.Dispose(disposing);
         }
 
+        
+
         #region Código generado por el Diseñador de Windows Forms
 
         /// <summary>
@@ -179,6 +181,8 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+
+
     }
 }
 

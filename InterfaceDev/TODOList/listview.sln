@@ -1,20 +1,31 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Blend for Visual Studio Version 17
+# Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "listview", "listview\listview.csproj", "{D3257F70-4BBA-4819-B95B-61A82A33EB77}"
 EndProject
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "wizard_advinst", "wizard_advinst\wizard_advinst.aiproj", "{911EE08E-8F2A-4A08-BEEE-B9B84035A2D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		DefaultBuild|Any CPU = DefaultBuild|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D3257F70-4BBA-4819-B95B-61A82A33EB77}.Debug|Any CPU.ActiveCfg = Release|Any CPU
 		{D3257F70-4BBA-4819-B95B-61A82A33EB77}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{D3257F70-4BBA-4819-B95B-61A82A33EB77}.DefaultBuild|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3257F70-4BBA-4819-B95B-61A82A33EB77}.DefaultBuild|Any CPU.Build.0 = Debug|Any CPU
 		{D3257F70-4BBA-4819-B95B-61A82A33EB77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3257F70-4BBA-4819-B95B-61A82A33EB77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{911EE08E-8F2A-4A08-BEEE-B9B84035A2D4}.Debug|Any CPU.ActiveCfg = DefaultBuild
+		{911EE08E-8F2A-4A08-BEEE-B9B84035A2D4}.Debug|Any CPU.Build.0 = DefaultBuild
+		{911EE08E-8F2A-4A08-BEEE-B9B84035A2D4}.DefaultBuild|Any CPU.ActiveCfg = DefaultBuild
+		{911EE08E-8F2A-4A08-BEEE-B9B84035A2D4}.DefaultBuild|Any CPU.Build.0 = DefaultBuild
+		{911EE08E-8F2A-4A08-BEEE-B9B84035A2D4}.Release|Any CPU.ActiveCfg = DefaultBuild
+		{911EE08E-8F2A-4A08-BEEE-B9B84035A2D4}.Release|Any CPU.Build.0 = DefaultBuild
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

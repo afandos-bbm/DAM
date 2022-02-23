@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
   static String marcasJson;
 
   static get darkMode => _darkMode;
-  static bool _darkMode = true;
+  static bool _darkMode = false;
 
   static Future<String> loadJson() async {
     await wait(3);
