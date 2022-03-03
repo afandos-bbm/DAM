@@ -30,6 +30,7 @@ public class Cliente extends Thread {
 		dineroCliente = dineroInicial;
 
 		start();
+		
 	}
 
 	public void iniciar() {

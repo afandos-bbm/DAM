@@ -15,8 +15,11 @@ public class MainRuleta {
 		new Cliente("AleatorioMartinGala ", r, dineroInicial, apuestaInicial, "A", "M");
 		new Cliente("AleatorioDAlembert  ", r, dineroInicial, apuestaInicial, "A", "D");
 
-		// Start all the threads
-		
-		
+
+		try {
+			r.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 }

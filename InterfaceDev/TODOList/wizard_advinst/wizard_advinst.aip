@@ -5,6 +5,7 @@
     <ROW Property="AI_CURRENT_YEAR" Value="2022" ValueLocId="-"/>
     <ROW Property="ALLUSERS" Value="1" MultiBuildValue="DefaultBuild:2"/>
     <ROW Property="ARPCOMMENTS" Value="Esta base de datos del instalador contiene la lógica y los datos necesarios para instalar [|ProductName]." ValueLocId="*"/>
+    <ROW Property="AiPreventAutoPin" Value="System.AppUserModel.ExcludeFromShowInNewInstall"/>
     <ROW Property="Manufacturer" Value="me.alejandrofan2"/>
     <ROW Property="ProductCode" Value="3082:{6CB417BE-ED0D-460F-A764-5B8120BE9CD1} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
@@ -24,6 +25,8 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
     <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
     <ROW Directory="ProgramFilesFolder" Directory_Parent="TARGETDIR" DefaultDir="PROGRA~1|ProgramFilesFolder" IsPseudoRoot="1"/>
+    <ROW Directory="ProgramMenuFolder" Directory_Parent="TARGETDIR" DefaultDir="PROGRA~2|ProgramMenuFolder" IsPseudoRoot="1"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
     <ROW Directory="_50D4453D38C444548B910FE141C35B71" Directory_Parent="ProgramFilesFolder" DefaultDir="TODOList"/>
   </COMPONENT>
@@ -32,6 +35,7 @@
     <ROW Component="C__439F482C73A5400D89A6BEDFD31AC10E" ComponentId="{9193BDB3-F7CB-4D74-A75D-E91B4092511B}" Directory_="_50D4453D38C444548B910FE141C35B71" Attributes="0" KeyPath="_439F482C73A5400D89A6BEDFD31AC10E"/>
     <ROW Component="C__683BB87DC80E4FDFA93E0E59D3846A8B" ComponentId="{2A46CAC7-DCE4-43CA-9782-7D77D486858A}" Directory_="_50D4453D38C444548B910FE141C35B71" Attributes="0" KeyPath="_683BB87DC80E4FDFA93E0E59D3846A8B"/>
     <ROW Component="ProductInformation" ComponentId="{8B0DE538-727A-4626-9981-BB91260B564E}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{6E16D993-583C-4A37-B7AF-771AF4192EC0}" Directory_="SHORTCUTDIR" Attributes="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
     <ROW Feature="DefaultFeature" Title="DefaultFeature" Display="2" Level="1" Directory_="APPDIR" Attributes="0"/>
@@ -41,6 +45,9 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
     <ROW File="_683BB87DC80E4FDFA93E0E59D3846A8B" Component_="C__683BB87DC80E4FDFA93E0E59D3846A8B" FileName="terms.txt" Attributes="512" SourcePath="..\listview\publish\terms.txt" SelfReg="false"/>
     <ROW File="_439F482C73A5400D89A6BEDFD31AC10E" Component_="C__439F482C73A5400D89A6BEDFD31AC10E" FileName="TODOList.exe" Attributes="512" SourcePath="..\listview\obj\Release\TODOList.exe" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.custcomp.MsiShortcutPropertyComponent">
+    <ROW MsiShortcutProperty="VinculoaTODOList1" Shortcut_="VinculoaTODOList" PropertyKey="[AiPreventAutoPin]" PropVariantValue="1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
     <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
@@ -96,6 +103,7 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
     <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
     <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
@@ -108,6 +116,7 @@
     <ROW Action="AI_SETMIXINSTLOCATION" Type="1" Source="aicustact.dll" Target="MixedAllUsersInstallLocation"/>
     <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
     <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="AI_SelectAutoPinOption" Type="51" Source="AiPreventAutoPin" Target="System.AppUserModel.StartPinOption"/>
     <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[AI_UserProgramFiles][Manufacturer]\[ProductName]"/>
     <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
     <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
@@ -117,6 +126,10 @@
     <ROW Feature_="MainFeature" Component_="ProductInformation"/>
     <ROW Feature_="DefaultFeature" Component_="C__683BB87DC80E4FDFA93E0E59D3846A8B"/>
     <ROW Feature_="DefaultFeature" Component_="C__439F482C73A5400D89A6BEDFD31AC10E"/>
+    <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="SystemFoldermsiexec.exe" SourcePath="&lt;AI_RES&gt;uninstall.ico" Index="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
     <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
@@ -126,6 +139,7 @@
     <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
     <ROW Action="AI_EnableDebugLog" Sequence="51"/>
     <ROW Action="AI_SETMIXINSTLOCATION" Sequence="748"/>
+    <ROW Action="AI_SelectAutoPinOption" Condition="VersionNT &gt; 601" Sequence="1401"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
     <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
@@ -146,6 +160,11 @@
     <ROW Registry="ProductName" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="\"/>
     <ROW Registry="Software" Root="-1" Key="Software" Name="\"/>
     <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="Desinstalar" Directory_="_50D4453D38C444548B910FE141C35B71" Name="DESINS~1|Desinstalar" Component_="ProductInformation" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Hotkey="0" Icon_="SystemFoldermsiexec.exe" IconIndex="0" ShowCmd="1"/>
+    <ROW Shortcut="VinculoaTODOList" Directory_="SHORTCUTDIR" Name="TODOList" Component_="C__439F482C73A5400D89A6BEDFD31AC10E" Target="[#_439F482C73A5400D89A6BEDFD31AC10E]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="_50D4453D38C444548B910FE141C35B71"/>
+    <ROW Shortcut="VinculoaTODOList_1" Directory_="ProgramMenuFolder" Name="VINCUL~1|Vinculo a TODOList" Component_="C__439F482C73A5400D89A6BEDFD31AC10E" Target="[#_439F482C73A5400D89A6BEDFD31AC10E]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="_50D4453D38C444548B910FE141C35B71"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
     <ATTRIBUTE name="UsedTheme" value="classic"/>
