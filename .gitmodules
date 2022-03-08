@@ -1,0 +1,3 @@
+[submodule "programacion/MiniTerminalJava"]
+	path = programacion/MiniTerminalJava
+	url = https://github.com/masterprog-cmd/MiniTerminalJava.git
