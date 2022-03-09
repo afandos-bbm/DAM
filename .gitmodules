@@ -1,3 +1,15 @@
 [submodule "programacion/MiniTerminalJava"]
 	path = programacion/MiniTerminalJava
 	url = https://github.com/masterprog-cmd/MiniTerminalJava.git
+[submodule "programacion/BurgerRun"]
+	path = programacion/BurgerRun
+	url = https://github.com/alejandrofan2/BurgerRun.git
+[submodule "programacion/hundirlaflota"]
+	path = programacion/hundirlaflota
+	url = https://github.com/alejandrofan2/hundirlaflota.git
+[submodule "programacion/BK-menu-jpanel"]
+	path = programacion/BK-menu-jpanel
+	url = https://github.com/alejandrofan2/BK-menu-jpanel.git
+[submodule "sistemasInformaticos/2021SINF"]
+	path = sistemasInformaticos/2021SINF
+	url = https://github.com/alejandrofan2/2021SINF.git
