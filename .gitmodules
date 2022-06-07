@@ -13,3 +13,6 @@
 [submodule "sistemasInformaticos/2021SINF"]
 	path = sistemasInformaticos/2021SINF
 	url = https://github.com/alejandrofan2/2021SINF.git
+[submodule "TFG/DAM_TFG"]
+	path = TFG/DAM_TFG
+	url = https://github.com/alejandrofan2/DAM_TFG.git
